@@ -1,0 +1,36 @@
+/* --Footer--*/
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $background_footer;
+}
+
+.footer 
+.container {
+    display: flex;
+    align-items: baseline;
+}
+
+.address {
+    margin-right: 70px;
+
+
+&__logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    /* identical to box height */
+    color: $color_white;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+&__logoWeb {
+    color: $brand_style;
+}
+}
+
+
+

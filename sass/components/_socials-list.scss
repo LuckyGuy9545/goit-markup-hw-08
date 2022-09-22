@@ -1,0 +1,50 @@
+/*---Section 4 icons---*/
+
+.social-list {
+    display: flex;
+    justify-content: space-between;
+
+
+&__link {
+    background-color: $color_white;
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    color: $social_text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 250ms $cubic_bezier,
+        color 250ms $cubic_bezier;
+}
+
+&__icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+&__link:hover,
+&__link:focus {
+    background-color: $brand_style;
+    color: $color_white;
+
+    transition: background-color 250ms $cubic_bezier,
+        color 250ms $cubic_bezier;
+}
+
+&__link--alternative {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    color: $color_white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: color 250ms $cubic_bezier,
+        background-color 250ms $cubic_bezier;
+}
+}

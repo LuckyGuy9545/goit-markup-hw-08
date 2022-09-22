@@ -1,0 +1,26 @@
+.button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $color_white;
+    background-color: $brand_style;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 32px 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: background-color 250ms $cubic_bezier;
+
+
+&:hover,
+&:focus {
+    background-color: $blue_button;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms $cubic_bezier;
+}
+}

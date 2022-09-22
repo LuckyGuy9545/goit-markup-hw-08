@@ -1,0 +1,38 @@
+.partners-list {
+  display: flex;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    background-color: inherit;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    background-color: $color_white;
+    color: $social_text;
+
+    transition: border-color 250ms $cubic_bezier, color 250ms $cubic_bezier;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  /* --- Section 5 icons ---*/
+
+  &__icons {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border-color: $brand_style;
+    color: $brand_style;
+
+    transition: border-color 250ms $cubic_bezier, color 250ms $cubic_bezier;
+  }
+}

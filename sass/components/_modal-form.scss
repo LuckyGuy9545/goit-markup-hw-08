@@ -1,0 +1,138 @@
+/* ----Backdrop + Modal + Close button----*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms $cubic_bezier;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  background-color: $color_white;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms $cubic_bezier;
+}
+
+/*---- Form in modal window ----*/
+.modal-form {
+  &__fieldset {
+    border: transparent;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+  }
+  &__legend {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    color: $color_black;
+    margin-bottom: 12px;
+  }
+}
+
+.label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  display: block;
+  color: $color_grey;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    height: 40px;
+    padding-left: 42px;
+    cursor: pointer;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border-color: $brand_style;
+    outline: none;
+  }
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__heading {
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  &__div--comment {
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    fill: currentColor;
+    transition: fill 250ms $cubic_bezier;
+  }
+
+  &__div:focus-within > &__icon,
+  &__div:hover > &__icon {
+    fill: $brand_style;
+    transition: fill 250ms $cubic_bezier;
+  }
+
+  &__input_comment {
+    letter-spacing: 0.01em;
+
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    cursor: text;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+
+  &__input_comment:hover,
+  &__input_comment:focus {
+    border-color: $brand_style;
+    outline: none;
+  }
+}
+
+.form_submit_btn {
+  margin: 0 auto;
+}

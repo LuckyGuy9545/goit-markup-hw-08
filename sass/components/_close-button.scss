@@ -1,0 +1,31 @@
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    fill: currentColor;
+    background-color: $color_white;
+    border-radius: 50%;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    transition: background-color 250ms $cubic_bezier,
+        color 250ms $cubic_bezier;
+
+
+&:hover,
+&:focus {
+    color: $brand_style;
+
+    transition: background-color 250ms $cubic_bezier,
+        color 250ms $cubic_bezier;
+}
+}

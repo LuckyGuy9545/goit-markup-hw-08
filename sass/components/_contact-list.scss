@@ -1,0 +1,55 @@
+
+
+
+.contact-list {
+    margin: 0;
+
+&__item {
+    margin-bottom: 9px;
+}
+
+&__item:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+&__link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: $color_grey;
+    cursor: pointer;
+
+    transition: color 250ms $cubic_bezier;
+}
+
+&__link:hover,
+&__link:focus {
+    color: $brand_style;
+    transition: color 250ms $cubic_bezier;
+}
+
+&__maplink:hover,
+&__maplink:focus {
+    color: $brand_style;
+    transition: color 250ms $cubic_bezier;
+}
+}
+
+
+
+.footer,
+.contact-list__maplink {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    /* or 171% */
+    color: $color_white;
+
+    transition: color 250ms $cubic_bezier;
+}
+

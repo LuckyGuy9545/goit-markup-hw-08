@@ -1,0 +1,53 @@
+.term-of-use {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &__text,
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $color_grey;
+    margin: 0;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $brand_style;
+    text-decoration: underline;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  /*---- Custom Checker ----*/
+
+  &__checkbox {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__checkbox:checked + &__checkicon {
+    background-color: $brand_style;
+    border-color: transparent;
+    background-image: url(../image/icon\ check.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+
+  &__checkicon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    cursor: pointer;
+    border: 2px solid $color_black;
+    border-radius: 2px;
+    margin-right: 10px;
+  }
+}

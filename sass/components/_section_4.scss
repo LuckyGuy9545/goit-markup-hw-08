@@ -1,0 +1,54 @@
+/* Section #4*/
+
+.section-four {
+  background-color: $background_grey;
+  padding: 94px 0px 94px 0px;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+
+  color: $color_black;
+  width: 264px;
+  margin: 0 auto 50px auto;
+}
+
+.team-list {
+  display: flex;
+  margin: 0;
+
+  &__item {
+    margin-right: 30px;
+    background-color: $color_white;
+  }
+
+  &__item:last-child {
+    margin-right: 0px;
+  }
+}
+
+.team-info {
+  padding: 30px;
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: $color_black;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    /* identical to box height */
+    text-align: center;
+    margin-bottom: 16px;
+    color: $color_grey;
+  }
+}
