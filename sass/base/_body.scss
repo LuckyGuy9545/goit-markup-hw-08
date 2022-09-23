@@ -45,10 +45,11 @@ ul {
 }
 
 .container {
-  width: 1200px;
-  /*outline: 2px solid red;*/
+  min-width: 320px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
 }

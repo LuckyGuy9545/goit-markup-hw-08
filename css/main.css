@@ -48,28 +48,25 @@ ul {
 }
 
 .container {
-  width: 1200px;
-  /*outline: 2px solid red;*/
+  min-width: 320px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
-.header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
-}
 .header__navigation {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  justify-content: space-between;
 }
+
+.header .container {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
+}
+
 .header__logohead {
   font-family: "Raleway";
   font-weight: 700;
@@ -78,17 +75,19 @@ ul {
   color: #212121;
   text-decoration: none;
   cursor: pointer;
-  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+@media screen and (min-width: 1140px) {
+  .header__logohead {
+    margin-right: 93px;
+  }
 }
 .header__logo-web {
   color: #2196f3;
 }
 
 .header-list {
-  display: flex;
-  margin-right: auto;
   /* Подчеркивание Current page*/
 }
 .header-list__link--active::after {
@@ -129,7 +128,6 @@ ul {
 }
 
 .address-list {
-  display: flex;
   /* HEADER Icons*/
 }
 .address-list__link {
@@ -170,6 +168,39 @@ ul {
   width: 10px;
   height: 16px;
   fill: currentColor;
+}
+
+/*--- Mobile div ---*/
+.menu-button {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 /* ----Backdrop + Modal + Close button----*/
@@ -519,12 +550,16 @@ ul {
 
 .section-one {
   background-color: #2f303a;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/Hero_img.jpg");
-  background-size: 1600px;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+@media screen and (max-width: 480px) {
+  .section-one {
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/Mobile/Section_one.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 .section-one__title {
   font-weight: 900;

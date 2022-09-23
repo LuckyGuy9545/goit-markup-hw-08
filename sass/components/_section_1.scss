@@ -1,17 +1,21 @@
 .section-one {
   background-color: $background_footer;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: linear-gradient(
-      to top,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../image/Hero_img.jpg");
 
-  background-size: 1600px;
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-position: center;
+  @media screen and (max-width: 480px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../image/Mobile/Section_one.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 
   &__title {
     font-weight: 900;

@@ -27,6 +27,26 @@
           <a class="header__logohead" href="./index.html"
             ><span class="header__logo-web">Web</span>Studio</a
           >
+          <button
+            type="button"
+            class="menu-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключател мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                href="./image/symbol-defs.svg#icon-mobile_menu"
+              ></use>
+            </svg>
+          </button>
+        </nav>
+        
+        <div class="mobile-menu">
           <ul class="header-list">
             <li class="header-list__item">
               <a
@@ -42,26 +62,26 @@
               <a href="./contacts" class="header-list__link">Контакти </a>
             </li>
           </ul>
-        </nav>
-        <!--Address-->
-        <ul class="address-list">
-          <li>
-            <a href="mailto:info@devstudio.com" class="address-list__link"
-              ><svg class="address-list__icons mail">
-                <use href="./image/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+380961111111" class="address-list__link"
-              ><svg class="address-list__icons phone">
-                <use href="./image/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+
+          <ul class="address-list">
+            <li>
+              <a href="mailto:info@devstudio.com" class="address-list__link"
+                ><svg class="address-list__icons mail">
+                  <use href="./image/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+380961111111" class="address-list__link"
+                ><svg class="address-list__icons phone">
+                  <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -558,6 +578,7 @@
       </div>
     </footer>
 
+    <!-- Modal-form -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form name="order_a_service_data" class="modal-form">
@@ -630,7 +651,22 @@
         </button>
       </div>
     </div>
+    <!-- Mobile menu container -->
+    <div class="menu-container js-menu-container">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./image/symbol-defs.svg##icon-close-black"></use>
+        </svg>
+      </button>
+    </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

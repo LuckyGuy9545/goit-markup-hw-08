@@ -1,17 +1,17 @@
-.header .container {
+.header__navigation {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  
+}
+
+.header .container {
+  background-color: $color_white;
+  border-bottom: 1px solid #ececec;
 }
 
 .header {
-  background-color: $color_white;
-  border-bottom: 1px solid #ececec;
-
-  &__navigation {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-  }
+  
 
   &__logohead {
     font-family: "Raleway";
@@ -21,9 +21,13 @@
     color: $color_black;
     text-decoration: none;
     cursor: pointer;
-    margin-right: 93px;
+
     padding-top: 24px;
     padding-bottom: 24px;
+
+    @media screen and (min-width: 1140px) {
+      margin-right: 93px;
+    }
   }
 
   &__logo-web {
@@ -32,9 +36,7 @@
 }
 
 .header-list {
-  display: flex;
-  margin-right: auto;
-
+ 
   /* Подчеркивание Current page*/
   &__link--active::after {
     content: "";
@@ -82,7 +84,6 @@
 }
 
 .address-list {
-  display: flex;
 
   &__link {
     display: flex;
