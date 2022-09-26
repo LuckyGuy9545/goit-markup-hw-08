@@ -1,11 +1,13 @@
 .partners-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 210px;
     height: 92px;
     background-color: inherit;
     border: 1px solid #afb1b8;
@@ -14,10 +16,22 @@
     color: $social_text;
 
     transition: border-color 250ms $cubic_bezier, color 250ms $cubic_bezier;
+
+    @media screen and (min-width: 768px) {
+      width: 226px;
+      height: 92px;
+    }
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item:nth-child(-n + 4) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+    width: 170px;
   }
 
   /* --- Section 5 icons ---*/

@@ -6,16 +6,19 @@
   &__text,
   &__link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 12px;
+    line-height: 1.16;
     color: $color_grey;
     margin: 0;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.7;
+    }
   }
 
   &__link {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
     color: $brand_style;
     text-decoration: underline;
   }
@@ -35,7 +38,7 @@
   &__checkbox:checked + &__checkicon {
     background-color: $brand_style;
     border-color: transparent;
-    background-image: url(../image/icon\ check.svg);
+    background-image: url(/image/Desktop/icon\ check.svg);
     background-size: contain;
     background-origin: border-box;
   }

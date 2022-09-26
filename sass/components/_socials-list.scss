@@ -1,11 +1,12 @@
 /*---Section 4 icons---*/
 
 .social-list {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  margin: 0 auto;
 
-
-&__link {
+  &__link {
     background-color: $color_white;
     border-radius: 50%;
     height: 44px;
@@ -15,36 +16,26 @@
     justify-content: center;
     align-items: center;
 
-    transition: background-color 250ms $cubic_bezier,
-        color 250ms $cubic_bezier;
-}
+    transition: background-color 250ms $cubic_bezier, color 250ms $cubic_bezier;
+  }
 
-&__icon {
+  &__link--footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $color_white;
+    transition: color 250ms $cubic_bezier, background-color 250ms $cubic_bezier;
+  }
+
+  &__icon {
     fill: currentColor;
     width: 20px;
     height: 20px;
-}
+  }
 
-&__link:hover,
-&__link:focus {
+  &__link:hover,
+  &__link:focus {
     background-color: $brand_style;
     color: $color_white;
 
-    transition: background-color 250ms $cubic_bezier,
-        color 250ms $cubic_bezier;
-}
-
-&__link--alternative {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    height: 44px;
-    width: 44px;
-    color: $color_white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: color 250ms $cubic_bezier,
-        background-color 250ms $cubic_bezier;
-}
+    transition: background-color 250ms $cubic_bezier, color 250ms $cubic_bezier;
+  }
 }

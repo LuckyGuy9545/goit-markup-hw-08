@@ -1,22 +1,39 @@
 .button-menu {
-    padding: 94px 0px 94px 0px;
+  padding: 60px 0px;
 
-
-&__list {
+  &__list {
     display: flex;
-    margin: 0px auto 34px auto;
-    justify-content: center;
-}
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 326px;
+    }
 
-&__item {
-    margin-right: 8px;
-}
+    @media screen and (min-width: 768px) {
+      justify-content: space-around;
+      margin: 0 auto;
+      width: 575px;
+      height: 38px;
+      margin-bottom: 15px;
+    }
+  }
 
-&__item:last-child {
+  &__item:last-child {
     margin-right: 0;
-}
 
-&__btn {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  // mobile css
+  &__item:nth-child(-n + 4) {
+    @media screen and (max-width: 767px) {
+      margin: 0px 8px 15px 0px;
+    }
+  }
+
+  &__btn {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -28,14 +45,14 @@
     border: none;
     padding: 6px 22px 6px 22px;
     width: max-content;
-}
+  }
 
-&__btn:hover,
-&__btn:focus {
+  &__btn:hover,
+  &__btn:focus {
     color: $color_white;
     background: $brand_style;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
+      0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-}
+  }
 }

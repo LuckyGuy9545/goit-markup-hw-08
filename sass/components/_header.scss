@@ -2,31 +2,44 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+  min-height: 60px;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 738px;
+  }
 }
 
 .header .container {
   background-color: $color_white;
   border-bottom: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header {
-  
-
   &__logohead {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.16;
     color: $color_black;
     text-decoration: none;
     cursor: pointer;
 
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 15px 0px;
 
-    @media screen and (min-width: 1140px) {
+    @media screen and (min-width: 1200px) {
       margin-right: 93px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      line-height: 1.2;
     }
   }
 
@@ -36,7 +49,12 @@
 }
 
 .header-list {
- 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    width: 283px;
+    margin-right: 96px;
+  }
+
   /* Подчеркивание Current page*/
   &__link--active::after {
     content: "";
@@ -60,7 +78,7 @@
     letter-spacing: 0.02em;
     color: $color_black;
     cursor: pointer;
-    padding: 32px 0 32px 0;
+    padding: 32px 0px;
     transition: color 250ms $cubic_bezier;
   }
 
@@ -84,6 +102,9 @@
 }
 
 .address-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &__link {
     display: flex;
@@ -93,19 +114,17 @@
     line-height: 1.15;
     letter-spacing: 0.02em;
     color: $color_grey;
+
     cursor: pointer;
-    padding: 32px 0 32px 0;
     transition: color 250ms $cubic_bezier;
+
+    @media screen and (min-width: 1200px) {
+      padding: 32px 0;
+    }
   }
 
-  & li {
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-  }
-
-  & li:last-child {
-    margin-right: 0px;
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 
   &__link:hover,

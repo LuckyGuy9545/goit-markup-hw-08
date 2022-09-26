@@ -20,47 +20,68 @@
 
   <body>
     <!--HEADER-->
+
     <header class="header">
       <div class="container">
         <nav class="header__navigation">
           <a class="header__logohead" href="./index.html"
             ><span class="header__logo-web">Web</span>Studio</a
           >
-          <ul class="header-list">
-            <li class="header-list__item">
-              <a href="./index.html" class="header-list__link">Студія </a>
-            </li>
-            <li class="header-list__item">
-              <a
-                href="portfolio.html"
-                class="header-list__link header-list__link--active"
-                >Портфоліо
-              </a>
-            </li>
-            <li class="header-list__item">
-              <a href="./contacts" class="header-list__link">Контакти </a>
-            </li>
-          </ul>
+          <button
+            type="button"
+            class="menu-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключател мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                href="./image/symbol-defs.svg#icon-mobile_menu"
+              ></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu">
+            <ul class="header-list">
+              <li class="header-list__item">
+                <a href="./index.html" class="header-list__link">Студія </a>
+              </li>
+              <li class="header-list__item">
+                <a
+                  href="portfolio.html"
+                  class="header-list__link header-list__link--active"
+                  >Портфоліо
+                </a>
+              </li>
+              <li class="header-list__item">
+                <a href="./contacts" class="header-list__link">Контакти </a>
+              </li>
+            </ul>
+
+            <ul class="address-list">
+              <li class="address-list__item">
+                <a href="mailto:info@devstudio.com" class="address-list__link"
+                  ><svg class="address-list__icons mail">
+                    <use href="./image/symbol-defs.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="address-list__item">
+                <a href="tel:+380961111111" class="address-list__link"
+                  ><svg class="address-list__icons phone">
+                    <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <!--Address-->
-        <ul class="address-list">
-          <li>
-            <a href="mailto:info@devstudio.com" class="address-list__link"
-              ><svg class="address-list__icons mail">
-                <use href="./image/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+380961111111" class="address-list__link"
-              ><svg class="address-list__icons phone">
-                <use href="./image/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -93,12 +114,38 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imglaptop(1).jpg"
-                    alt="Люди на моніторі ноутбука"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card1-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card1-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card1-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card1-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card1-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card1-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card1-mobile.jpg"
+                      alt="Люди на моніторі ноутбука"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -117,12 +164,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgbasket(1).jpg"
-                    alt="Люди грають в баскетбол"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card2-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card2-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card2-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card2-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card2-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card2-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card2-mobile.jpg"
+                      alt="Люди грають в баскетбол"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -143,12 +218,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgseafood(1).jpg"
-                    alt="Логотип ресторану Морська Їжа"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card3-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card3-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card3-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card3-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card3-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card3-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card3-mobile.jpg"
+                      alt="Логотип ресторану Морська Їжа"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -167,12 +270,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgheadphones(1).jpg"
-                    alt="Чорні навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card5-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card4-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card4-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card4-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card4-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card4-mobile.jpg"
+                      alt="Чорні навушники"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -191,12 +322,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgprojectbox(1).jpg"
-                    alt="Дві коробки з проектами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card5-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card5-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card5-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card5-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card5-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card5-mobile.jpg"
+                      alt="Дві коробки з проектами"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -215,12 +374,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgmacohno(1).jpg"
-                    alt="Інформація на моніторі"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card6-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card6-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card6-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card6-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card6-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card6-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card6-mobile.jpg"
+                      alt="Інформація на моніторі"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -239,12 +426,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgbook(1).jpg"
-                    alt="Книга з рекламою"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card7-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card7-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card7-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card7-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card7-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card7-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card7-mobile.jpg"
+                      alt="Книга з рекламою"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -263,12 +478,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imglabel(1).jpg"
-                    alt="Етикетка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card8-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card8-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card8-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card8-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card8-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card8-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card8-mobile.jpg"
+                      alt="Етикетка"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -287,12 +530,40 @@
             <li class="card-set__item">
               <a class="card-set__link" href="">
                 <div class="card-set__thumb">
-                  <img
-                    src="./image/imgsmallpc(1).jpg"
-                    alt="Людина працює на ноутбуці"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card9-desktop.jpg    1x,
+                        ./image/img_hw8/portfolio-card9-desktop@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card9-tablet.jpg    1x,
+                        ./image/img_hw8/portfolio-card9-tablet@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./image/img_hw8/portfolio-card9-mobile.jpg    1x,
+                        ./image/img_hw8/portfolio-card9-mobile@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="card-set__img"
+                      src="./image/img_hw8/portfolio-card9-mobile.jpg"
+                      alt="Людина працює на ноутбуці"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="card-set__overlay">
                     <p class="card-set__img-text">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -316,78 +587,80 @@
     <!--FOOTER-->
     <footer class="footer">
       <div class="container">
-        <div class="address">
-          <a href="./index.html" class="address__logo">
-            <span class="address__logoWeb">Web</span>Studio
-          </a>
-          <address>
-            <ul class="contact-list">
-              <li class="contact-list__item">
+        <div class="tablet-container">
+          <div class="address">
+            <a href="./index.html" class="address__logo">
+              <span class="address__logoWeb">Web</span>Studio
+            </a>
+            <address>
+              <ul class="contact-list">
+                <li class="contact-list__item">
+                  <a
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="contact-list__maplink"
+                    >м. Київ, пр-т Лесі Українки, 26
+                  </a>
+                </li>
+                <li class="contact-list__item">
+                  <a href="mailto:info@devstudio.com" class="contact-list__link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="contact-list__item">
+                  <a href="tel:+380961111111" class="contact-list__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="joinUs">
+            <p class="joinUs__text">Приєднуйтесь</p>
+            <ul class="social-list">
+              <li>
                 <a
-                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  class="contact-list__maplink"
-                  >м. Київ, пр-т Лесі Українки, 26
+                  href="https://www.instagram.com/accounts/login/"
+                  class="social-list__link social-list__link--footer"
+                >
+                  <svg class="social-list__icon" width="44" height="44">
+                    <use href="./image/symbol-defs.svg#icon-insta"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="contact-list__item">
-                <a href="mailto:info@devstudio.com" class="contact-list__link"
-                  >info@devstudio.com</a
+              <li>
+                <a
+                  href="https://twitter.com/intent/tweet"
+                  class="social-list__link social-list__link--footer"
                 >
+                  <svg class="social-list__icon" width="44" height="44">
+                    <use href="./image/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="contact-list__item">
-                <a href="tel:+380961111111" class="contact-list__link"
-                  >+38 096 111 11 11</a
+              <li>
+                <a
+                  href="https://www.facebook.com/login/"
+                  class="social-list__link social-list__link--footer"
                 >
+                  <svg class="social-list__icon" width="44" height="44">
+                    <use href="./image/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/login/ru"
+                  class="social-list__link social-list__link--footer"
+                >
+                  <svg class="social-list__icon" width="44" height="44">
+                    <use href="./image/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="joinUs">
-          <p class="joinUs__text">Приєднуйтесь</p>
-          <ul class="social-list">
-            <li>
-              <a
-                href="https://www.instagram.com/accounts/login/"
-                class="social-list__link social-list__link--alternative"
-              >
-                <svg class="social-list__icon" width="44" height="44">
-                  <use href="./image/symbol-defs.svg#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/intent/tweet"
-                class="social-list__link social-list__link--alternative"
-              >
-                <svg class="social-list__icon" width="44" height="44">
-                  <use href="./image/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/login/"
-                class="social-list__link social-list__link--alternative"
-              >
-                <svg class="social-list__icon" width="44" height="44">
-                  <use href="./image/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/login/ru"
-                class="social-list__link social-list__link--alternative"
-              >
-                <svg class="social-list__icon" width="44" height="44">
-                  <use href="./image/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="signUp">
@@ -414,5 +687,87 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile menu container -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./image/symbol-defs.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <div class="modal-mobile">
+        <ul class="modal-mobile__list">
+          <li class="modal-mobile__item">
+            <a href="./index.html" class="modal-mobile__link">Студія </a>
+          </li>
+          <li class="modal-mobile__item">
+            <a
+              href="portfolio.html"
+              class="modal-mobile__link modal-mobile__link--active"
+              >Портфоліо
+            </a>
+          </li>
+          <li class="modal-mobile__item">
+            <a href="./contacts" class="modal-mobile__link">Контакти </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-adrress">
+          <li class="mobile-adrress__item">
+            <a href="tel:+380961111111" class="mobile-adrress__phone">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-adrress__item">
+            <a href="mailto:info@devstudio.com" class="mobile-adrress__mail">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-modal-social">
+          <li class="mobile-modal-social__item">
+            <a
+              href="https://www.instagram.com/accounts/login/"
+              class="mobile-modal-social__link"
+            >
+              Instagram
+            </a>
+          </li>
+          <li class="mobile-modal-social__item">
+            <a
+              href="https://twitter.com/intent/tweet"
+              class="mobile-modal-social__link"
+            >
+              Twitter
+            </a>
+          </li>
+          <li class="mobile-modal-social__item">
+            <a
+              href="https://www.facebook.com/login/"
+              class="mobile-modal-social__link"
+            >
+              Facebook
+            </a>
+          </li>
+          <li class="mobile-modal-social__item">
+            <a
+              href="https://www.linkedin.com/login/ru"
+              class="mobile-modal-social__link"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

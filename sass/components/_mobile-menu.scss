@@ -12,22 +12,138 @@
   border: none;
   border-radius: 50%;
   outline: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-container {
-  position: fixed;
+  display: none;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
-  z-index: 999;
-  transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  padding: 40px;
+  background-color: $color_white;
+  overflow-y: scroll;
 }
 
+.menu-container.is-open {
+  display: block;
+}
 
 .mobile-menu {
   display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    
+  }
+}
+
+.modal-mobile {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    margin-bottom: auto;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: $color_black;
+  }
+  &__link--active {
+    color: $brand_style;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 30px;
+  // height: 30px;
+  fill: currentColor;
+  background-color: $color_white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 250ms $cubic_bezier;
+}
+
+.menu-toggle:hover {
+  color: $brand_style;
+  transition: color 250ms $cubic_bezier;
+}
+
+.mobile-adrress {
+  margin-bottom: 64px;
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $brand_style;
+
+    margin-bottom: 32px;
+  }
+
+  &__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: $color_grey;
+  }
+}
+
+.mobile-modal-social {
+  display: flex;
+  width: 100%;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__item:not(:last-child)::after {
+    content: " |";
+    margin-left: 10px;
+    color: rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $brand_style;
+  }
+
+  &__link &__link::after {
+    content: " |";
+  }
+
+  &__link:last-child::after {
+    content: "";
+  }
 }

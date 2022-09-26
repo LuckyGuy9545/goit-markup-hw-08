@@ -1,15 +1,25 @@
 /*---Section 5---*/
 .section-five {
   background-color: $color_white;
-  padding: 94px 0px 94px 0px;
+  padding: 60px 0px;
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
 
   &__title {
     width: 297px;
-    margin: 0px auto 50px auto;
+    margin: 0px auto 30px auto;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
     color: $color_black;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.16;
+      margin: 0px auto 50px auto;
+    }
   }
 }

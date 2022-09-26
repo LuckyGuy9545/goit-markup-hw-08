@@ -1,8 +1,7 @@
 .section-one {
   background-color: $background_footer;
 
-  // background-position: center;
-  @media screen and (max-width: 480px) {
+  @media screen and (min-width: 320px), (max-width: 480px) {
     background-image: linear-gradient(
         to top,
         rgba(47, 48, 58, 0.4),
@@ -17,17 +16,42 @@
     padding-bottom: 118px;
   }
 
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../image/img_hw8/hero-tablet.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 768px;
+    height: 400px;
+    // padding-top: 118px;
+    // padding-bottom: 118px;
+  }
+
   &__title {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.6;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $color_white;
-    width: 700px;
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+      width: 700px;
+    }
   }
 }

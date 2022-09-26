@@ -19,6 +19,10 @@
     text-align: center;
     color: $color_black;
   }
+
+  @media screen and (max-width: 1139px) {
+    display: none;
+  }
 }
 
 .product {
