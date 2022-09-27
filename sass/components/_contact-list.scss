@@ -2,7 +2,10 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
+    align-items: center;
+  }
 
   &__item {
     margin-bottom: 9px;

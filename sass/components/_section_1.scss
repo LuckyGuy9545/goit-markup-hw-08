@@ -1,7 +1,8 @@
 .section-one {
   background-color: $background_footer;
-
-  @media screen and (min-width: 320px), (max-width: 480px) {
+  background-repeat: no-repeat;
+  background-position: center;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     background-image: linear-gradient(
         to top,
         rgba(47, 48, 58, 0.4),
@@ -9,8 +10,6 @@
       ),
       url("../image/Mobile/Section_one.jpg");
 
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 480px;
     padding-top: 118px;
     padding-bottom: 118px;
@@ -24,12 +23,21 @@
       ),
       url("../../image/img_hw8/hero-tablet.jpg");
 
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: 768px;
-    height: 400px;
-    // padding-top: 118px;
-    // padding-bottom: 118px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../image/img_hw8/hero-tablet.jpg");
+    background-size: 100%;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 
   &__title {
@@ -40,7 +48,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $color_white;
-    width: 360px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;

@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 40px;
   background-color: $color_white;
@@ -39,7 +39,11 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -119,6 +123,10 @@
 .mobile-modal-social {
   display: flex;
   width: 100%;
+
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+  }
 
   &__item:not(:last-child) {
     margin-right: 10px;

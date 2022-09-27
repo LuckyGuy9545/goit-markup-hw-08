@@ -3,7 +3,10 @@
 .signUp {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+  }
 
   @media screen and (min-width: 1200px) {
     width: 570px;
@@ -22,14 +25,8 @@
 }
 
 .email-form {
-  // &__field {
-  //   // position: relative;
-  //   // display: flex;
-  //   // justify-content: space-between;
-  // }
-
   &__input {
-    width: 450px;
+    // width: 450px;
     height: 50px;
     margin-bottom: 20px;
 
@@ -39,6 +36,14 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding-left: 16px;
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
   }
 
   &__input::placeholder {
@@ -50,7 +55,14 @@
 
   &__field {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+    }
   }
 }

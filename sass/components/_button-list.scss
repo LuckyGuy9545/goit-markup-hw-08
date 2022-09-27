@@ -1,6 +1,10 @@
 .button-menu {
   padding: 60px 0px;
 
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
+
   &__list {
     display: flex;
     @media screen and (max-width: 767px) {
@@ -14,7 +18,11 @@
       margin: 0 auto;
       width: 575px;
       height: 38px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
     }
   }
 

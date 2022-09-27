@@ -15,7 +15,15 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+  }
+
+  @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1140px;
     justify-content: space-between;
   }
 
@@ -40,6 +48,12 @@
     @media screen and (min-width: 768px) {
       width: 354px;
     }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 100%;
+      margin-bottom: 0px;
+    }
   }
   &__item:not(:last-child) {
     @media screen and (max-width: 767px) {
@@ -48,14 +62,8 @@
   }
 
   &__item:nth-child(-n + 2) {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-bottom: 30px;
-    }
-  }
-
-  &__item:not(:last-child) {
-    @media screen and (min-width: 1200px) {
-      margin-right: 30px;
     }
   }
 
