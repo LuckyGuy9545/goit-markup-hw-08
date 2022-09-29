@@ -20,12 +20,13 @@
 
 .header .container {
   background-color: $color_white;
-  border-bottom: 1px solid #ececec;
   display: flex;
   justify-content: space-between;
 }
 
 .header {
+  border-bottom: 1px solid #ececec;
+
   &__logohead {
     font-family: "Raleway";
     font-weight: 700;
