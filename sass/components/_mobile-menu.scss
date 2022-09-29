@@ -11,7 +11,6 @@
   cursor: pointer;
   border: none;
   border-radius: 50%;
-  outline: none;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -62,6 +61,10 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: $color_black;
+
+    @media screen and (max-width: 479px) {
+      font-size: 25px;
+    }
   }
   &__link--active {
     color: $brand_style;
@@ -90,7 +93,8 @@
   transition: color 250ms $cubic_bezier;
 }
 
-.menu-toggle:hover {
+.menu-toggle:hover,
+.menu-toggle:focus {
   color: $brand_style;
   transition: color 250ms $cubic_bezier;
 }
@@ -109,6 +113,10 @@
     color: $brand_style;
 
     margin-bottom: 32px;
+
+    @media screen and (max-width: 479px) {
+      font-size: 25px;
+    }
   }
 
   &__mail {
@@ -117,6 +125,10 @@
     line-height: 1.16;
     letter-spacing: 0.02em;
     color: $color_grey;
+
+    @media screen and (max-width: 479px) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -145,6 +157,10 @@
     letter-spacing: 0.02em;
 
     color: $brand_style;
+
+    @media screen and (max-width: 479px) {
+      font-size: 9px;
+    }
   }
 
   &__link &__link::after {

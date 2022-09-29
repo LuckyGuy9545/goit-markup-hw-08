@@ -30,14 +30,19 @@
     margin-right: 0;
 
     @media screen and (max-width: 767px) {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
   }
 
-  // mobile css
-  &__item:nth-child(-n + 4) {
+  &__item:nth-child(-n + 3) {
     @media screen and (max-width: 767px) {
       margin: 0px 8px 15px 0px;
+    }
+  }
+
+  &__item:nth-child(4) {
+    @media screen and (max-width: 767px) {
+      margin: 0px 8px 30px 0px;
     }
   }
 

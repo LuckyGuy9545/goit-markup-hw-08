@@ -4,6 +4,10 @@
   flex-direction: column;
   margin-bottom: 60px;
 
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+  }
+
   &__text {
     font-weight: 700;
     font-size: 14px;
