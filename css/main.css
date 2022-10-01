@@ -505,7 +505,7 @@ ul {
   position: absolute;
   top: 11px;
   left: 12px;
-  fill: currentColor;
+  fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .label__div:focus-within > .label__icon, .label__div:hover > .label__icon {
@@ -601,10 +601,11 @@ ul {
     height: 572px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .partners-list {
     height: 336px;
     flex-wrap: wrap;
+    align-content: space-between;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -810,7 +811,7 @@ ul {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-one {
-    background-image: url("../image/img_hw8/hero-mobile@2x.jpg");
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/img_hw8/hero-mobile@2x.jpg");
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -828,7 +829,7 @@ ul {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .section-one {
-    background-image: url("../image/img_hw8/hero-tablet@2x.jpg");
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/img_hw8/hero-tablet@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -843,7 +844,7 @@ ul {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .section-one {
-    background-image: url("../image/img_hw8/hero-desktop@2x.jpg");
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/img_hw8/hero-desktop@2x.jpg");
   }
 }
 .section-one__title {
@@ -913,6 +914,12 @@ ul {
   color: #212121;
   text-align: start;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .benefit-list__heading {
+    display: flex;
+    justify-content: center;
+  }
 }
 .benefit-list__details {
   font-weight: 400;
@@ -1020,6 +1027,10 @@ ul {
   .section-four {
     padding: 94px 0;
   }
+}
+
+.section-four .container {
+  padding: 0px;
 }
 
 .team-title {

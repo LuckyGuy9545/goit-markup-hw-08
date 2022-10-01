@@ -35,6 +35,11 @@
     color: $color_black;
     text-align: start;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__details {
