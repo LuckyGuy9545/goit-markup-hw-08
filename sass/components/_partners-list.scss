@@ -10,7 +10,7 @@
     height: 572px;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     height: 336px;
     flex-wrap: wrap;
     align-content: space-between;
